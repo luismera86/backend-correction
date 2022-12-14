@@ -24,7 +24,18 @@ const deliverySchema = new Schema<Delivery>({
         type: Number
     },
     student: {
-        type: Object
+        name: {
+            type: String
+        },
+        tutor: {
+            type: String
+        },
+        commission: {
+            type: Number
+        },
+        course: {
+            type: String
+        },
     },
     result: {
         type: String

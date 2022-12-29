@@ -2,20 +2,45 @@ import { model, Schema } from 'mongoose'
 import { Delivery } from './interfaces'
 
 const deliverySchema = new Schema<Delivery>({
-  commentOne: {
-    type: String,
+  evaluationOne: {
+    comment: {
+      type: String
+    },
+    status: {
+      type: String
+    },
   },
-  commentTow: {
-    type: String,
+  evaluationTow: {
+    comment: {
+      type: String
+    },
+    status: {
+      type: String
+    },
   },
-  commentThree: {
-    type: String,
+  evaluationThree: {
+    comment: {
+      type: String
+    },
+    status: {
+      type: String
+    },
   },
-  commentFour: {
-    type: String,
+  evaluationFour: {
+    comment: {
+      type: String
+    },
+    status: {
+      type: String
+    },
   },
-  commentFive: {
-    type: String,
+  evaluationFive: {
+    comment: {
+      type: String
+    },
+    status: {
+      type: String
+    },
   },
   feedback: {
     type: String,

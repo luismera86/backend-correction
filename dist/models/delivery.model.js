@@ -2,20 +2,45 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = require("mongoose");
 const deliverySchema = new mongoose_1.Schema({
-    commentOne: {
-        type: String,
+    evaluationOne: {
+        comment: {
+            type: String
+        },
+        status: {
+            type: String
+        },
     },
-    commentTow: {
-        type: String,
+    evaluationTow: {
+        comment: {
+            type: String
+        },
+        status: {
+            type: String
+        },
     },
-    commentThree: {
-        type: String,
+    evaluationThree: {
+        comment: {
+            type: String
+        },
+        status: {
+            type: String
+        },
     },
-    commentFour: {
-        type: String,
+    evaluationFour: {
+        comment: {
+            type: String
+        },
+        status: {
+            type: String
+        },
     },
-    commentFive: {
-        type: String,
+    evaluationFive: {
+        comment: {
+            type: String
+        },
+        status: {
+            type: String
+        },
     },
     feedback: {
         type: String,

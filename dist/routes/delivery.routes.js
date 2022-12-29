@@ -5,5 +5,6 @@ const express_1 = require("express");
 const validateMongoId_1 = require("../middlewares/validateMongoId");
 const deliveryRoutes = (0, express_1.Router)();
 deliveryRoutes.get('/:id', validateMongoId_1.validateMongoId, delivery_controller_1.getDeliveryById);
+deliveryRoutes.get('/', delivery_controller_1.getDeliveries);
 deliveryRoutes.post('/', delivery_controller_1.postDeliveryById);
 exports.default = deliveryRoutes;

@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.postDeliveryById = exports.getDeliveryById = void 0;
+exports.postDeliveryById = exports.getDeliveries = exports.getDeliveryById = void 0;
 const models_1 = require("../models");
 const getDeliveryById = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { id } = req.params;
@@ -25,6 +25,19 @@ const getDeliveryById = (req, res) => __awaiter(void 0, void 0, void 0, function
     }
 });
 exports.getDeliveryById = getDeliveryById;
+const getDeliveries = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const delivery = yield models_1.Delivery.find();
+        res.status(200).json({ delivery });
+    }
+    catch (error) {
+        res.json({
+            msg: error,
+        });
+        console.log(error);
+    }
+});
+exports.getDeliveries = getDeliveries;
 const postDeliveryById = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const delivery = new models_1.Delivery(req.body);

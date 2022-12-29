@@ -16,6 +16,20 @@ export const getDeliveryById = async (req: Request, res: Response) => {
   }
 }
 
+export const getDeliveries = async (req: Request, res: Response) => {
+  
+  try {
+    const delivery = await Delivery.find()
+
+    res.status(200).json({ delivery })
+  } catch (error) {
+    res.json({
+      msg: error,
+    })
+    console.log(error)
+  }
+}
+
 export const postDeliveryById = async (req: Request, res: Response) => {
   try {
     const delivery = new Delivery(req.body)
